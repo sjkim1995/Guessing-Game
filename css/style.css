@@ -1,4 +1,23 @@
-h1, h2 {
-	font-style: "Arial";
-	color: "solid black";
+h1 {
+	position: absolute;
+	top: 350px;
+	padding-left: 50px;
+	font-family: Arial;
 }
+
+h1 span {
+	color: white;
+	background: black;
+	opacity: 50%;
+	padding: 5px;
+}
+
+.below {
+padding-left: 550px;
+}
+
+#guess {
+	width: 225px;
+	height: 60px;
+}
+
