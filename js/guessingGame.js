@@ -4,7 +4,7 @@ var playersGuess,
     winningNumber = generateWinningNumber(),
     prevGuesses = [],
     lives = 5,
-    audio;
+	audio = new Audio('audio/fail.mp3');
 
 /* **** Guessing Game Functions **** */
 console.log("Winning Number is: " + winningNumber);
@@ -51,7 +51,7 @@ function checkGuess(guess){
 			$("#result").text("");
 			audio = new Audio('audio/snoop.mp3');
 			audio.play();
-			document.getElementById("bannerIM").src = "img/thuglife.png";
+			$("#bannerIM").attr("src", "img/thuglife.png")
 		});	
 	}
 	else if (lives == 1) {
@@ -112,6 +112,7 @@ function provideHint(){
 		for (var i = 0; i < lives * 2; i++) {
 			possibilities.push(generateWinningNumber());
 		}
+		// inserts the winning number in a random index
 		var randomIndex = Math.floor(Math.random() * (lives * 2));
 		possibilities[randomIndex] = winningNumber;
 		hint = hint + possibilities.join(", ");
@@ -133,7 +134,7 @@ function playAgain(){
 		$("#hint").text("");
 		$("body").css("background-color", "");
 		$("h1").find('span').text("The Guessing Game");
-		document.getElementById("bannerIM").src = "img/fStack.png"; 
+		$("#bannerIM").attr("src", "img/fStack.png")
 		audio.pause();
 	});	
 	console.log("New Winning Number is: " + winningNumber);
@@ -147,4 +148,3 @@ $(document).ready(function () {
 	    }
 	});
 });
-
