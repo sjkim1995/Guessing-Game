@@ -9,25 +9,36 @@
 	<body>
 	
 	<div style="banner" class="banner">
-		<img src="img/fStack.png" width="100%"/>
+		<img src="img/fStack.png" id="bannerIM" width="100%"/>
 		<h1><span>The Guessing Game</span></h1>
 	</div>
 	<br>
-	<hr>
 
-	<div class = "below">	
+	<div class="below">	
+
 		<div class="form-group">
-			<input class="form-control" id="guess" placeholder="Input Guess 1-100">
+			<input id="guess" placeholder="Input Guess 1-100">
 		 </div>
 		
-		<button type="button" class="btn btn-primary">Guess</button>
-			<button type="submit" class="btn btn-default">Hint</button>
+		<button type="button" class="btn btn-primary" onclick="playersGuessSubmission()">Submit Guess</button>
+		<button type="submit" class="btn btn-default" onclick="provideHint()">Hint</button>
 		
-		<button type="button" class="btn btn-danger">Play Again</button>   
-		 	<script src="js/main.js"></script> 
-		</body> 
-	
+		<button type="button" id="reset" class="btn btn-danger" onclick="playAgain()">Play Again</button>   
+
+		<br><br>
+		<div id = "result"><p></p></div>
+		<div id = "guessMessage"><p></p></div>
+		<div id = "hint"><p></p></div>
+		
 	</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/guessinggame.js"></script> 
+ 
+
+		</body> 
+		
+
 	
 	<br>
 </html>

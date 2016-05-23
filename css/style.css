@@ -13,11 +13,17 @@ h1 span {
 }
 
 .below {
-padding-left: 550px;
+	text-align: center;
 }
 
 #guess {
-	width: 225px;
+	width: 270px;
 	height: 60px;
 }
 
+#result {
+	font-size: 18px;
+	font-family: Arial;
+	color: Red;
+	font-weight: 5pt;
+}
